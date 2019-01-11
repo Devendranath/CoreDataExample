@@ -15,6 +15,7 @@
 		18DE7DF421E709EC0020882A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DE7DF221E709EC0020882A /* LaunchScreen.storyboard */; };
 		18DE7DFC21E70A3F0020882A /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE7DFB21E70A3F0020882A /* CoreDataManager.swift */; };
 		18DE7DFE21E715A60020882A /* CoreData_PDF.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 18DE7DFD21E715A60020882A /* CoreData_PDF.pdf */; };
+		18DE7E2121E853EC0020882A /* StudentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DE7E2021E853EC0020882A /* StudentsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		18DE7DF521E709EC0020882A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DE7DFB21E70A3F0020882A /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		18DE7DFD21E715A60020882A /* CoreData_PDF.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CoreData_PDF.pdf; sourceTree = "<group>"; };
+		18DE7E2021E853EC0020882A /* StudentsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				18DE7DE621E709E70020882A /* AppDelegate.swift */,
 				18DE7DE821E709E70020882A /* ViewController.swift */,
+				18DE7E2021E853EC0020882A /* StudentsListViewController.swift */,
 				18DE7DFD21E715A60020882A /* CoreData_PDF.pdf */,
 				18DE7DFB21E70A3F0020882A /* CoreDataManager.swift */,
 				18DE7DEA21E709E70020882A /* Main.storyboard */,
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18DE7E2121E853EC0020882A /* StudentsListViewController.swift in Sources */,
 				18DE7DE921E709E70020882A /* ViewController.swift in Sources */,
 				18DE7DE721E709E70020882A /* AppDelegate.swift in Sources */,
 				18DE7DFC21E70A3F0020882A /* CoreDataManager.swift in Sources */,

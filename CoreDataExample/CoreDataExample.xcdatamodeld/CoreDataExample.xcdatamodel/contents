@@ -4,8 +4,16 @@
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="established" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="standard" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="school" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rollNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="school" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="School" inverseName="students" inverseEntity="School" syncable="YES"/>
     </entity>
     <elements>
-        <element name="School" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="School" positionX="-54" positionY="-9" width="128" height="118"/>
+        <element name="Student" positionX="177.99609375" positionY="-0.25390625" width="128" height="88"/>
     </elements>
 </model>

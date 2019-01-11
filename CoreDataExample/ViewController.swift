@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var schoolsListView: UITableView!
     var schools: [School] = []
+    var selectedSchool: School!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,13 @@ class ViewController: UIViewController {
         CoreDataManager.shared.save()
         fetchSchools()        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let slVC = segue.destination as! StudentsListViewController
+        
+        slVC.selectedSchool = selectedSchool
+    }
+        
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -65,14 +73,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let aSchool = schools[indexPath.row]
-        aSchool.name = "Chaithnya"
-        aSchool.address = "Banglore"
-        CoreDataManager.shared.save()
-        
-        tableView.beginUpdates()
-        tableView.reloadRows(at: [indexPath], with: .fade)
-        tableView.endUpdates()
+//        let aSchool = schools[indexPath.row]
+//        aSchool.name = "Chaithnya"
+//        aSchool.address = "Banglore"
+//        CoreDataManager.shared.save()
+//
+//        tableView.beginUpdates()
+//        tableView.reloadRows(at: [indexPath], with: .fade)
+//        tableView.endUpdates()
+        selectedSchool = schools[indexPath.row]
+            
+            self.performSegue(withIdentifier: "MoveToStudents", sender: nil)
     }
 }
 
